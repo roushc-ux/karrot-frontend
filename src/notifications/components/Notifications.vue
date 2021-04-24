@@ -33,7 +33,11 @@
         v-if="!asPopover && canFetchPast"
         class="row justify-center"
       >
-        
+          <QBtn
+          size="sm"
+          :loading="fetchingPast"
+          @click="fetchPast"
+        >
           {{ $t('BUTTON.SHOW_MORE') }}
         </QBtn>
       </QItem>
